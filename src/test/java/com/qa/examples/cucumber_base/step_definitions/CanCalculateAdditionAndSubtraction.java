@@ -1,32 +1,35 @@
 package com.qa.examples.cucumber_base.step_definitions;
 
+import static org.junit.Assert.assertEquals;
+
+import com.qa.examples.cucumber_base.Calculator;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class CanCalculateAdditionAndSubtraction {
+	
+	private Calculator calculator;
+	private int actualResult;
 
 	@Given("a calculator")
 	public void aCalculator() {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		calculator = new Calculator();
 	}
 
 	@When("{int} and {int} are added")
-	public void andAreAdded(Integer int1, Integer int2) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+	public void andAreAdded(Integer num1, Integer num2) {
+		actualResult = num1 + num2;
 	}
 	
 	@When("{int} is subtracted from {int}")
-	public void isSubtractedFrom(Integer int1, Integer int2) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void isSubtractedFrom(Integer num1, Integer num2) {
+	    actualResult = num2 - num1;
 	}
 	
 	@Then("the result should be {int}")
-	public void theResultShouldBe(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void theResultShouldBe(Integer expectedResult) {
+	    assertEquals(expectedResult.intValue(), actualResult);
 	}
 }

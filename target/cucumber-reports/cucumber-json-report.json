@@ -1,0 +1,136 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-09T16:48:23.429Z",
+        "line": 7,
+        "name": "3 add 4 is 7",
+        "description": "",
+        "id": "can-calculate-addition-and-subtraction-correctly?;3-add-4-is-7",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1998600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "a calculator",
+            "match": {
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.aCalculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 997100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "3 and 4 are added",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                },
+                {
+                  "val": "4",
+                  "offset": 6
+                }
+              ],
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.andAreAdded(java.lang.Integer,java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2031100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the result should be 7",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 21
+                }
+              ],
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.theResultShouldBe(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-06-09T16:48:23.499Z",
+        "line": 12,
+        "name": "4 subtract 3 is 1",
+        "description": "",
+        "id": "can-calculate-addition-and-subtraction-correctly?;4-subtract-3-is-1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "a calculator",
+            "match": {
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.aCalculator()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "3 is subtracted from 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                },
+                {
+                  "val": "4",
+                  "offset": 21
+                }
+              ],
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.isSubtractedFrom(java.lang.Integer,java.lang.Integer)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the result should be 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 21
+                }
+              ],
+              "location": "com.qa.examples.cucumber_base.step_definitions.CanCalculateAdditionAndSubtraction.theResultShouldBe(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Can calculate addition and subtraction correctly?",
+    "description": "  To test whether addition and subtraction return the correct\n  results.",
+    "id": "can-calculate-addition-and-subtraction-correctly?",
+    "keyword": "Feature",
+    "uri": "classpath:features/can-calculate-addition-and-subtraction.feature",
+    "tags": []
+  }
+]
