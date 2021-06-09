@@ -12,9 +12,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		glue = "com.qa.examples.cucumber_base.step_definitions",
 		snippets = SnippetType.CAMELCASE, // changes snippet output to camelcase rather than underscore
 		plugin = {
-				"summary", 
 				"pretty", // prettify output
-				"html:target/cucumber" // location for target report
+				"html:target/cucumber-reports/cucumber-html-report.html",
+				"junit:target/cucumber-reports/cucumber-junit-report.xml",
+				"json:target/cucumber-reports/cucumber-json-report.json"
 		},
 		monochrome = false // true = black & white output
 )
