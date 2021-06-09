@@ -1,4 +1,4 @@
-package com.qa.examples.cucumber_base.utils;
+package com.qa.examples.cucumber_base;
 
 /**
  * Calculator class for basic floating-point mathematical operations.
