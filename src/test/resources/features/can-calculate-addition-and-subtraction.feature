@@ -4,12 +4,12 @@ Feature: Can calculate addition and subtraction correctly?
   To test whether addition and subtraction return the correct
   results.
 
-  Scenario: Three add four is seven
+  Scenario: 3 add 4 is 7
     Given a calculator
-    When three and four are added
-    Then the result should be seven
+    When 3 and 4 are added
+    Then the result should be 7
 
-  Scenario: Four subtract three is one
+  Scenario: 4 subtract 3 is 1
     Given a calculator
-    When three is subtracted from four
-    Then the result should be one
+    When 3 is subtracted from 4
+    Then the result should be 1
