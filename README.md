@@ -14,8 +14,22 @@ mvn clean test
 
 ## Exercises
 
-1. Add a feature file with scenarios for testing division and multiplication with the `Calculator class`
+1. Create a user story for dividing and a user story for multiplication
 
-2. Add step definitions for your scenarios
+2. Perform the Discovery stage to find the scope of the systems behaviour.
 
-3. Run your tests and verify if they worked successfully
+Ask yourself and your team if done in a team (Developer, Tester & Product Owner):
+
+- What rules constrain the user story to be implemented?
+- Are there any questions that no-one knows the answer/correct outcome to? (These are generally questions where the behaviour is out of scope or needs to be answered by the client)
+- Are there any new user stories we have managed to slice out of the story under discovery?
+- What is the expected outcome of the behaviour?
+- What is being tested?
+
+3. Perform the Formulation stage by adding a feature file with scenarios for testing division and multiplication with the `Calculator class`, this acceptance criteria is 
+
+- Add step definitions for your scenarios
+
+4. Perform the Automation stage by providing an implementation in code for your documented examples
+
+5. Run your tests and verify they worked. If they worked, you have successfully implemented BDD in a simple way.

@@ -26,13 +26,12 @@ public class Calculator {
 	}
 	
 	public double divide(double a, double b) {
-		if (b != 0.0d) {
-			return a / b;
-		}
+		// TODO: Implement
 		return 0.0d;
 	}
 	
 	public double multiply(double a, double b) {
-		return a * b;
+		// TODO: Implement
+		return 0.0d;
 	}
 }
