@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"junit:target/cucumber-reports/cucumber-junit-report.xml",
 				"json:target/cucumber-reports/cucumber-json-report.json"
 		},
-		monochrome = false // true = black & white output
+		monochrome = true // true = black & white output
 )
 public class RunCucumberTest {
 
