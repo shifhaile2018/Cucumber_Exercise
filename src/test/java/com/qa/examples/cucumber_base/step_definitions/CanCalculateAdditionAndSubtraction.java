@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 public class CanCalculateAdditionAndSubtraction {
 	
 	private Calculator calculator;
-	private int actualResult;
+	private double actualResult;
 
 	@Given("a calculator")
 	public void aCalculator() {
@@ -20,16 +20,16 @@ public class CanCalculateAdditionAndSubtraction {
 
 	@When("{int} and {int} are added")
 	public void andAreAdded(Integer num1, Integer num2) {
-		actualResult = num1 + num2;
+		actualResult = calculator.add(num1, num2);
 	}
 	
 	@When("{int} is subtracted from {int}")
 	public void isSubtractedFrom(Integer num1, Integer num2) {
-	    actualResult = num2 - num1;
+	    actualResult = calculator.subtract(num2, num1);
 	}
 	
 	@Then("the result should be {int}")
 	public void theResultShouldBe(Integer expectedResult) {
-	    assertEquals(expectedResult.intValue(), actualResult);
+	    assertEquals(expectedResult.doubleValue(), actualResult, 2);
 	}
 }
