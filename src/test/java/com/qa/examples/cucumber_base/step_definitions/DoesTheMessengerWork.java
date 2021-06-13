@@ -19,23 +19,24 @@ public class DoesTheMessengerWork {
 		messenger.addUser(new User(forename, "", email, age));
 	}
 
-	@When("{string} sends the message {string} to {string}")
-	public void sendsTheMessage(String senderEmail, String message, String receiverEmail) {		
+	@When("{string} sends the message {message} to {string}")
+	public void sendsTheMessage(String senderEmail, Message message, String receiverEmail) {		
 		messenger.sendMessage(message, senderEmail, receiverEmail);
 	}
 
-	@Then("{string} receives the message {string} from {string}")
-	public void receivesTheMessageFrom(String recipientName, String message, String senderName) {
+	@Then("{string} receives the message {message} from {string}")
+	public void receivesTheMessageFrom(String recipientName, Message expectedMessage, String senderName) {
 		User recipient = messenger.getUserByForename(recipientName);
 		User sender = messenger.getUserByForename(senderName);
 		
-		Message expectedMessageReceived = new Message(message, sender.getEmail(), recipient.getEmail());
-				
+		expectedMessage.setrecipientEmail(recipient.getEmail());
+		expectedMessage.setSender(sender.getEmail());
+		
 		for (var m : recipient.getMessages()) {
 			System.out.println(m);
 		}
 		Message actualMessageReceived = recipient.getMessages().get(0);
 		
-		assertEquals(expectedMessageReceived, actualMessageReceived);
+		assertEquals(expectedMessage, actualMessageReceived);
 	}
 }

@@ -11,13 +11,14 @@ public class Messenger {
 		this.activeUsers = new ArrayList<User>();
 	}
 
-	public void sendMessage(String message, String senderEmail, String receiverEmail) {
-		if (message.isBlank() || senderEmail == null || receiverEmail == null) return;
+	public void sendMessage(Message message, String senderEmail, String receiverEmail) {
+		if (message == null || senderEmail == null || receiverEmail == null) return;
 		
 		for (var user : activeUsers) {
 			if (user.getEmail().equals(receiverEmail)) {
-				Message toSend = new Message(message, senderEmail, receiverEmail);
-				user.addMessage(toSend);
+				message.setrecipientEmail(receiverEmail);
+				message.setSender(senderEmail);
+				user.addMessage(message);
 			}
 		}
 	}
