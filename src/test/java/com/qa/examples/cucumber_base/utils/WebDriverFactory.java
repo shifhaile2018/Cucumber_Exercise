@@ -26,6 +26,7 @@ public class WebDriverFactory {
 
 		switch (webdriver) {
 		case "firefox":
+			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/firefoxdriver.exe");
 			prefs.clear();
 			
 			FirefoxOptions fOptions = new FirefoxOptions();
@@ -42,24 +43,25 @@ public class WebDriverFactory {
 		case "chrome":
 			prefs.clear();
 
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.setHeadless(false);
 			chromeOptions.setAcceptInsecureCerts(true);
 			chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-			// Settings
-			prefs.put("profile.default_content_setting_values.cookies", 2);
-			prefs.put("network.cookie.cookieBehavior", 2);
-			prefs.put("profile.block_third_party_cookies", true);
-			prefs.put("profile.default_content_settings.popups", 0);
-			prefs.put("profile.default_content_settings.notifications", 2);
+			
+			// Settings - disabled as cookies are needed for SecretSauce login
+//			prefs.put("profile.default_content_setting_values.cookies", 2);
+//			prefs.put("network.cookie.cookieBehavior", 2);
+//			prefs.put("profile.block_third_party_cookies", true);
+//			prefs.put("profile.default_content_settings.popups", 0);
+//			prefs.put("profile.default_content_settings.notifications", 2);
 			// Create ChromeOptions to disable Cookies pop-up
 			chromeOptions.setExperimentalOption("prefs", prefs);
 			
 			return new ChromeDriver(chromeOptions);
 		case "edge":
 			prefs.clear();
-			System.setProperty("webdriver.edge.driver", "src/test/resources/msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
 			ChromeOptions cOptions = new ChromeOptions();	
 			
 //			prefs.put("profile.default_content_setting_values.cookies", 2);
