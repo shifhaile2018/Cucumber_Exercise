@@ -14,6 +14,8 @@ mvn clean test
 
 ## Exercises
 
+### 1. Calculator Exercise
+
 1. Create a user story for dividing and a user story for multiplication
 
 2. Perform the Discovery stage to find the scope of the systems behaviour.
@@ -33,3 +35,13 @@ Ask yourself and your team if done in a team (Developer, Tester & Product Owner)
 4. Perform the Automation stage by providing an implementation in code for your documented examples
 
 5. Run your tests and verify they worked. If they worked, you have successfully implemented BDD in a simple way.
+
+### 2. Selenium
+
+Using Selenium, action the following:
+
+1. Create a user story for navigating to and searching for a page on google.
+2. Perform the discovery stage to find the scope of the systems behaviour.
+3. Convert the user story into acceptance criteria using the Formulation stage.
+4. Peform the Automation stage by implementing your documented examples.
+5. Run your tests and verify they worked.
